@@ -24,6 +24,8 @@ function main(){
 
     nextBtn.onclick = e => {
         let value = form["egg-value"].value;
+        // Microsoft Edge
+        if(value == null) value = form["egg-value"]["egg-value"].value
         log.add(value);
         updateByLog(log);
     };
