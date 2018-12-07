@@ -12,15 +12,16 @@ svg{
     margin: 20px auto;
     max-width: 400px;
     max-height: 400px;
-    width: 80vmax;
-    height: 80vmax;
+    width: 80vmin;
+    height: 80vmin;
+    min-width: 200px;
+    min-height: 200px;
 }
 
-/* select{
-    line-height: 30px;
-    height: 30px;
-    padding: 0 10px
-} */
+label{
+    display: inline-block;
+}
+
 button{
     height: 30px;
     padding: 0 10px
