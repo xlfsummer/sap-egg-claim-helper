@@ -34,7 +34,7 @@ export default class Log {
     }
 
     _save(){
-        let values = this.readTopValue(20);
+        let values = this.readTopValue(30);
         window.localStorage.setItem("logs", JSON.stringify(values));
     }
 
