@@ -1,0 +1,16 @@
+{
+    "name": "Summone & Puzzel Egg Claim Helper",
+    "short_name": "snp Egg Helper",
+    "start_url": ".",
+    "background_color": "#fff",
+    "description": "The app that help you to find the color of next egg claimed in S&P",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "egg.svg",
+            "size": "48*48",
+            "type": "image/xml+svg"
+        }
+    ],
+    "theme_color": "gray"
+}

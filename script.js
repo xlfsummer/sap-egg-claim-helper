@@ -95,22 +95,13 @@ main();
 
 
 (async function(){
-    let registration = await navigator.serviceWorker.register("/service-worker.js", {
-        type: "module",
-        scope: "/"
-    });
-
-    // await navigator.serviceWorker.ready;
-
-    let subscription = await registration.pushManager.getSubscription();
-
-    if(subscription) return subscription;
-
-    subscription = await registration.pushManager.subscribe({
-        applicationServerKey: "hello",
-        userVisibleOnly: true
-    })
-    
-    subscription
-
+    let registration = null
+    try{
+        registration = await navigator.serviceWorker.register("/service-worker.js", {
+            scope: "/"
+        });
+    }catch(e){
+        console.log(e);
+        console.log(registration);
+    }
 })();
