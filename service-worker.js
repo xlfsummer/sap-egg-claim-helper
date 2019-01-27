@@ -1,12 +1,12 @@
 const CACHE_NAME = "1";
 
 self.addEventListener("install", function(event){
-    event.waitUtil(Promise.all(caches.keys().map(cacheName => {
+    event.waitUtil(Promise.all(caches.keys().then(keys => keys.map(cacheName => {
             if(cacheName != CACHE_NAME){
                 return caches.delete(cacheName);
             }
         }))
-    );
+    ));
 });
 
 self.addEventListener("fetch", function(event){
