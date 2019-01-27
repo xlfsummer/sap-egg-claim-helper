@@ -97,6 +97,6 @@ main();
 (async function(){
     let registration = null
     let isDev = window.location.origin.includes("localhost");
-    let scope = isDev ? "/" : "/sap-egg-claim-helper";
+    let scope = isDev ? "/" : "/sap-egg-claim-helper/";
     await navigator.serviceWorker.register("./service-worker.js", { scope });
 })();
