@@ -1,10 +1,13 @@
-const CACHE_NAME = "1";
+const CACHE_NAME = "0.1.0";
 
 self.addEventListener("install", function(event){
-    event.waitUtil(Promise.all(caches.keys().then(keys => keys.map(cacheName => {
+    caches.keys().then(keys => keys.map)
+
+    event.waitUntil(caches.keys().then(keys => Promise.all(keys.map(cacheName => {
             if(cacheName != CACHE_NAME){
                 return caches.delete(cacheName);
             }
+            return Promise.resolve();
         }))
     ));
 });

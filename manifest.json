@@ -7,9 +7,19 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "egg.svg",
-            "size": "48*48",
-            "type": "image/xml+svg"
+            "src": "asset/logo144_144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "asset/logo48_48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "asset/logo32_32.png",
+            "sizes": "32x32",
+            "type": "image/png"
         }
     ],
     "theme_color": "gray"
